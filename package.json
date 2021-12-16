@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "repository": "https://github.com/TryGhost/react-data-playground",
+  "author": "Ghost Foundation",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "eslintIgnore": [
+    "**/node_modules/**"
+  ],
+  "scripts": {
+    "dev": "echo \"Implement me!\"",
+    "presetup": "yarn",
+    "setup": "lerna bootstrap",
+    "test:parent": "NODE_ENV=testing c8 --check-coverage mocha './test/**/*.test.js'",
+    "test": "yarn test:parent && lerna run test",
+    "lint": "lerna run lint",
+    "preship": "yarn test",
+    "ship": "lerna publish"
+  },
+  "devDependencies": {
+    "c8": "7.10.0",
+    "eslint": "8.4.1",
+    "eslint-plugin-ghost": "2.11.0",
+    "mocha": "9.1.3",
+    "should": "13.2.3",
+    "sinon": "12.0.1"
+  }
+}
