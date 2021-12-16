@@ -10,7 +10,7 @@
     "**/node_modules/**"
   ],
   "scripts": {
-    "dev": "echo \"Implement me!\"",
+    "dev": "yarn workspace data-app start",
     "presetup": "yarn",
     "setup": "lerna bootstrap",
     "test:parent": "NODE_ENV=testing c8 --check-coverage mocha './test/**/*.test.js'",
